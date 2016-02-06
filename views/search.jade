@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    h1= title
+
+    p Exact name please, e.g. "Counterspell" or "Iron Star" or "Wrath of God"
+    #boosterSelect
+        form#boosterForm(name="selectSet", method="post", action="/searchresults")
+            input(type="text", placeholder="Search for a card...", name="query")
+
+               
+            button#submitMe(type="submit") submit
+
+
+

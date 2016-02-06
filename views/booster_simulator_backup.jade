@@ -1,0 +1,31 @@
+extends layout
+
+block content
+    
+    h1= title
+    #boosterStatusBox
+    #boosterSelect
+        form(name="selectSet", method="post", action="/deck_builder")
+            
+            label Number of Players        
+            select#numPlayers(name="numPlayers")
+                -for(i =1; i< 3; i++){
+                    option(value="{#i}") #{i}
+                -}
+            br
+
+            p Select boosters
+            select(name="sets")
+                each set, i in setList
+                    option(value="#{set.code}") #{set.code} : #{set.name}
+
+            select(name="sets")
+                each set, i in setList
+                    option(value="#{set.code}") #{set.code} : #{set.name}
+
+            select(name="sets")
+                each set, i in setList
+                    option(value="#{set.code}") #{set.code} : #{set.name}
+               
+        button(type="submit") submit
+

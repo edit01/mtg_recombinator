@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to #{title}      
+    each set in sets
+        p= set.code + ': ' + set.name
+
+    each cards, i in boosters
+        h1= "Booster: " + i
+        for card in cards            
+            img(src = "http://mtgimage.com/set/" + card.setcode + "/" + card.imageName + ".jpg" width="250" padding="5")
+

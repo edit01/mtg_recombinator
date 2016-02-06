@@ -1,0 +1,43 @@
+extends layout
+
+block content
+    
+    h1= title
+    p Select boosters
+    #boosterStatusBox
+
+    button#addPlayer Add a Player
+    #boosterSelect
+        form#boosterForm(name="selectSet", method="post", action="/deck_builder")
+
+            fieldset.player
+                legend Player 1
+                select(name="sets")
+                    each set, i in setList
+                        option(value="#{set.code}") #{set.code} : #{set.name}
+
+                select(name="sets")
+                    each set, i in setList
+                        option(value="#{set.code}") #{set.code} : #{set.name}
+
+                select(name="sets")
+                    each set, i in setList
+                        option(value="#{set.code}") #{set.code} : #{set.name}
+
+                select(name="sets")
+                    each set, i in setList
+                        option(value="#{set.code}") #{set.code} : #{set.name}
+
+                select(name="sets")
+                    each set, i in setList
+                        option(value="#{set.code}") #{set.code} : #{set.name}
+
+                select(name="sets")
+                    each set, i in setList
+                        option(value="#{set.code}") #{set.code} : #{set.name}
+
+
+               
+            button#submitMe(type="submit") submit
+
+    

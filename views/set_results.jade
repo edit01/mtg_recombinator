@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    h1= title
+    
+    #imageTable
+        table
+            thead
+                th
+                th card
+                th qty
+                th action
+
+            tbody
+                each card in set[0].cards
+                    tr
+                        td 
+                            img(class="showImage" src="http://mtgimage.com/set/" + set[0].code + "/" + card.imageName + ".jpg" width="75")
+                        td= card.name
+                        td 0
+                        td update
+
+
+
+        
+                
+        
+                

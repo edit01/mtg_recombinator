@@ -1,0 +1,10 @@
+
+
+
+cat AllSets.json | json -Ma value > AllSets_processed.json
+
+cat AllCards.json | json -Ma value > AllCards_processed.json
+
+mongoimport --db mtgjson --collection sets --file AllSets_processed.json --jsonArray
+
+

@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    h1= title
+
+     
+        form#boosterForm(name="set", method="post", action="/set_results")
+
+            fieldset.player
+                legend Select a set to see inventory  
+                select(name="set")
+                    each set, i in setList
+                        option(value="#{set.code}") #{set.code} : #{set.name}
+
+            button#submitMe(type="submit") submit
+
+

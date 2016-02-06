@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    h1.
+        User List
+    ul
+        each set, i in results
+            li
+                -var card = set.cards[0]
+                p= set.name + card.name
+                img(src = "http://mtgimage.com/set/" + set.code + "/" + card.imageName + ".jpg" width="250" padding="5")
